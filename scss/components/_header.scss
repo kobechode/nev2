@@ -1,0 +1,118 @@
+.header {
+    border-bottom: 1px solid $clr-white;
+   
+    padding: 2rem 0;
+    z-index: 999;
+    @include mediaQuery($break-md){
+  position: fixed;
+    width: calc(100% - 3rem)
+        
+    }
+
+    &__logo {
+        h2 span {
+            color: $clr-primary;
+            z-index: 1;
+            cursor: pointer;
+        }
+    }
+    nav{
+        &.open{
+
+            ul{
+
+                right:-50%;
+                padding: 1rem;
+            }
+        }
+        z-index: 1;
+    }
+    nav ul li a{
+        color: white;
+        font-weight: bold;
+        font-size: 1.1rem;
+        
+    }
+    nav ul {
+
+       
+        gap: 2rem;
+
+        @include mediaQuery($break-md) {
+            transition: 0.5s ease;
+            display: block !important;
+            position: absolute;
+            background-color: rgba(128, 128, 128, 0.463);
+            right:calc(-100% - 3rem);
+            top: 6.2rem;
+            width: 100%;
+            
+            height: 100vh;
+
+            li {
+                border-bottom: 1px solid $clr-white;
+                margin: 1rem 0;
+                margin-left: 1rem 0
+            }
+
+            ;
+        }
+    }
+
+    .toggle__menu {
+
+        display: none;
+        cursor: pointer;
+
+        z-index: 1;
+
+        span {
+            background-color: $clr-primary;
+            height: 0.2rem;
+            width: 2rem;
+            display: block;
+            margin-bottom: 0.2rem;
+            border-radius: 2rem;
+        }
+
+        
+
+        @include mediaQuery($break-md) {
+            display: block;
+                }
+
+               
+    }
+
+    .toggle__menu.open span:nth-child(1){
+        transition: 0.5s ease;
+        transform: translate(-2px, 7.3px) rotate(45deg);
+    }
+    .toggle__menu.open span:nth-child(2){
+        opacity: 0;
+        transition: 0s;
+    }
+    .toggle__menu.open span:nth-child(3){
+        transition: 0.5s ease;
+        transform: translate(-2px, -12px) rotate(-45deg);
+    }
+
+       
+ 
+
+
+    .toggle__menu{
+         
+        cursor: pointer;
+        z-index: 1;
+        span{
+             
+            background-color: $clr-primary;
+            height: 0.2rem;
+            width: 2rem;
+            display: block;
+            margin-bottom: 0.4rem;
+            border-radius: 2rem;
+        }
+    }
+}

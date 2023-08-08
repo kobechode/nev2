@@ -1,0 +1,67 @@
+
+.footer{
+
+    &__btn a{
+
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+        padding: 1rem 1rem !important;
+        @include mediaQuery($break-md){
+         padding: 1rem 0 !important;
+         
+        }
+      }
+    border-bottom: 1px solid $clr-white;
+  
+  
+    &__quicklinks{
+        
+
+  
+      gap: 5rem;
+      ul li{
+  
+        &:first-child{
+  
+          margin-bottom: 1rem;
+          font-weight: bold;
+        }
+      }
+      @include mediaQuery($break-md) {
+        display: block !important;
+            } 
+    }
+    &__btn{
+  
+      &:last-child{
+  
+        width: 100%;
+        text-align: center;
+        
+      }
+    }
+
+ 
+
+             &__wrapper{
+                @include mediaQuery($break-md) {
+                    display: block !important;
+                        }   
+
+             }
+
+       
+              
+
+            .thelinks{
+
+                gap: 2rem;
+               
+              }
+
+            
+  }
+
+
+ 
